@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Code/AC620_Draft/class4_beep/prj/simulation/modelsim
+T_opt
+!s110 1606809326
+VgnEMo;OP[Uhn;z`6z>oYc3
+04 12 4 work beep_test_tb fast 0
+=1-c85b76ecf1b4-5fc5f6ee-152-204c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vbeep_test
+Z1 !s110 1606809325
+!i10b 1
+!s100 ;46^E5^Bhb4SYYO^@W1jT3
+IWP`7YX`ZbgAOY;83fBWH80
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1606809156
+8E:/FPGA_Code/AC620_Draft/class4_beep/rtl/beep_test.v
+FE:/FPGA_Code/AC620_Draft/class4_beep/rtl/beep_test.v
+L0 8
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1606809325.507000
+!s107 E:/FPGA_Code/AC620_Draft/class4_beep/rtl/beep_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/class4_beep/rtl|E:/FPGA_Code/AC620_Draft/class4_beep/rtl/beep_test.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/class4_beep/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vbeep_test_tb
+R1
+!i10b 1
+!s100 KFFfzZ?5cReL5hlonF:B`2
+IzSEF?Q];=`n>adQnYOzT33
+R2
+R0
+w1606808714
+8E:/FPGA_Code/AC620_Draft/class4_beep/prj/../testbench/beep_test_tb.v
+FE:/FPGA_Code/AC620_Draft/class4_beep/prj/../testbench/beep_test_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1606809325.625000
+!s107 E:/FPGA_Code/AC620_Draft/class4_beep/prj/../testbench/beep_test_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/class4_beep/prj/../testbench|E:/FPGA_Code/AC620_Draft/class4_beep/prj/../testbench/beep_test_tb.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/class4_beep/prj/../testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

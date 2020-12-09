@@ -1,0 +1,1608 @@
+TimeQuest Timing Analyzer report for beep_test
+Tue Dec 01 16:30:27 2020
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Summary
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'clk'
+ 27. Slow 1200mV 0C Model Hold: 'clk'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Summary
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'clk'
+ 40. Fast 1200mV 0C Model Hold: 'clk'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Summary
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 55. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 56. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 57. Setup Transfers
+ 58. Hold Transfers
+ 59. Report TCCS
+ 60. Report RSKM
+ 61. Unconstrained Paths
+ 62. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name      ; beep_test                                           ;
+; Device Family      ; Cyclone IV E                                        ;
+; Device Name        ; EP4CE10F17C8                                        ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 224.11 MHz ; 224.11 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -3.462 ; -106.116           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.629 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -50.584                          ;
++-------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                         ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.462 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.382      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.451 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.371      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.448 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.368      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.432 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.352      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.408 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.328      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.404 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.324      ;
+; -3.385 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.305      ;
+; -3.385 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.305      ;
+; -3.385 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.305      ;
+; -3.385 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.081     ; 4.305      ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                         ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.629 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.418      ;
+; 0.740 ; beep_test:beep_test0|cnt[15] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.053      ;
+; 0.751 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.540      ;
+; 0.760 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.053      ;
+; 0.761 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[1]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.762 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.763 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; beep_test:beep_test0|cnt[31] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[9]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.765 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; beep_test:beep_test0|cnt[30] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.766 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.769 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.558      ;
+; 0.786 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[0]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.079      ;
+; 0.786 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.079      ;
+; 0.891 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.680      ;
+; 0.910 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.699      ;
+; 1.032 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.821      ;
+; 1.050 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.839      ;
+; 1.115 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.115 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.116 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.118 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.124 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[1]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.125 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.126 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; beep_test:beep_test0|cnt[30] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[9]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.127 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.420      ;
+; 1.127 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.420      ;
+; 1.127 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.420      ;
+; 1.131 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.084      ; 1.427      ;
+; 1.133 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.133 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.133 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.133 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.134 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.135 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.136 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.429      ;
+; 1.136 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.429      ;
+; 1.136 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.429      ;
+; 1.140 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.433      ;
+; 1.188 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.977      ;
+; 1.195 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.577      ; 1.984      ;
+; 1.246 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.539      ;
+; 1.246 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.539      ;
+; 1.247 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.248 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.248 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.248 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.248 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.249 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.542      ;
+; 1.249 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.542      ;
+; 1.253 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.084      ; 1.549      ;
+; 1.255 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.548      ;
+; 1.255 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.548      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; 0.244  ; 0.432        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; 0.246  ; 0.434        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; 0.265  ; 0.453        ; 0.188          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; 0.325  ; 0.545        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; 0.345  ; 0.565        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; 0.347  ; 0.567        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; 0.384  ; 0.384        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; beep_test0|cnt[0]|clk        ;
+; 0.384  ; 0.384        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; beep_test0|cnt[10]|clk       ;
+; 0.384  ; 0.384        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; beep_test0|cnt[11]|clk       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ena       ; clk        ; 1.813 ; 1.877 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ena       ; clk        ; -0.614 ; -0.735 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; beep      ; clk        ; 11.279 ; 11.588 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep      ; clk        ; 8.337 ; 8.554 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 237.87 MHz ; 237.87 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -3.204 ; -97.824           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.561 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -50.584                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                          ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.204 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.134      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.189 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.119      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.187 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.117      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.184 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.114      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.147 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.077      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.142 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.072      ;
+; -3.127 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.057      ;
+; -3.127 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.057      ;
+; -3.127 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.057      ;
+; -3.127 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.057      ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                          ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.561 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.295      ;
+; 0.653 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.387      ;
+; 0.684 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.418      ;
+; 0.686 ; beep_test:beep_test0|cnt[15] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.091      ; 0.972      ;
+; 0.704 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.972      ;
+; 0.704 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.972      ;
+; 0.704 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.972      ;
+; 0.705 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
+; 0.706 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[1]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
+; 0.706 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[9]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; beep_test:beep_test0|cnt[31] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.710 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
+; 0.710 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
+; 0.710 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.978      ;
+; 0.711 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; beep_test:beep_test0|cnt[30] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.713 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.980      ;
+; 0.729 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.997      ;
+; 0.732 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[0]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.000      ;
+; 0.776 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.510      ;
+; 0.806 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.540      ;
+; 0.904 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.638      ;
+; 0.929 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.663      ;
+; 1.026 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[1]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.026 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.026 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.026 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.026 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.027 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.028 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.028 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.028 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.029 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[9]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.297      ;
+; 1.029 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.030 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; beep_test:beep_test0|cnt[30] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.298      ;
+; 1.031 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.031 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.299      ;
+; 1.031 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.033 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.041 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.309      ;
+; 1.042 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.074      ; 1.311      ;
+; 1.042 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.310      ;
+; 1.042 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.309      ;
+; 1.043 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.311      ;
+; 1.044 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.312      ;
+; 1.044 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.312      ;
+; 1.044 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.312      ;
+; 1.044 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.311      ;
+; 1.045 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.045 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.313      ;
+; 1.046 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.046 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.046 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.047 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.314      ;
+; 1.048 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.782      ;
+; 1.048 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.782      ;
+; 1.053 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.321      ;
+; 1.119 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.387      ;
+; 1.120 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.388      ;
+; 1.120 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.388      ;
+; 1.121 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.388      ;
+; 1.122 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.122 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.122 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.124 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.392      ;
+; 1.126 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.394      ;
+; 1.126 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.393      ;
+; 1.128 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.395      ;
+; 1.129 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.396      ;
+; 1.142 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.539      ; 1.876      ;
+; 1.147 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.074      ; 1.416      ;
+; 1.148 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.074      ; 1.417      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; 0.253  ; 0.437        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; 0.297  ; 0.481        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; 0.300  ; 0.516        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; 0.345  ; 0.561        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; 0.346  ; 0.562        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; 0.384  ; 0.384        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; beep_test0|cnt[16]|clk       ;
+; 0.384  ; 0.384        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; beep_test0|cnt[17]|clk       ;
+; 0.384  ; 0.384        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; beep_test0|cnt[18]|clk       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ena       ; clk        ; 1.727 ; 1.826 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ena       ; clk        ; -0.586 ; -0.777 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; beep      ; clk        ; 10.193 ; 10.673 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep      ; clk        ; 7.507 ; 7.805 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.843 ; -25.263           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.262 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -44.538                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                          ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.843 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.793      ;
+; -0.838 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.035     ; 1.790      ;
+; -0.834 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.035     ; 1.786      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.825 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.775      ;
+; -0.824 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.035     ; 1.776      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.821 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.771      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.799 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.749      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.796 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.746      ;
+; -0.790 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.740      ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                          ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.262 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.584      ;
+; 0.294 ; beep_test:beep_test0|cnt[15] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.045      ; 0.423      ;
+; 0.303 ; beep_test:beep_test0|cnt[31] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[1]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[9]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; beep_test:beep_test0|cnt[30] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.307 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.428      ;
+; 0.307 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.428      ;
+; 0.314 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.636      ;
+; 0.316 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[0]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.436      ;
+; 0.317 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.329 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.651      ;
+; 0.381 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.703      ;
+; 0.395 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.717      ;
+; 0.448 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.770      ;
+; 0.453 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.454 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.455 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.460 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[15] ; clk          ; clk         ; 0.000        ; 0.238      ; 0.782      ;
+; 0.463 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[17] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[1]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.463 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.464 ; beep_test:beep_test0|cnt[30] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[9]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.465 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.465 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.465 ; beep_test:beep_test0|cnt[14] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.038      ; 0.587      ;
+; 0.465 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.466 ; beep_test:beep_test0|cnt[7]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.466 ; beep_test:beep_test0|cnt[16] ; beep_test:beep_test0|cnt[18] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; beep_test:beep_test0|cnt[0]  ; beep_test:beep_test0|cnt[2]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.466 ; beep_test:beep_test0|cnt[22] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; beep_test:beep_test0|cnt[6]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.467 ; beep_test:beep_test0|cnt[20] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; beep_test:beep_test0|cnt[18] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; beep_test:beep_test0|cnt[2]  ; beep_test:beep_test0|cnt[4]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.587      ;
+; 0.467 ; beep_test:beep_test0|cnt[24] ; beep_test:beep_test0|cnt[26] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; beep_test:beep_test0|cnt[8]  ; beep_test:beep_test0|cnt[10] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.587      ;
+; 0.468 ; beep_test:beep_test0|cnt[4]  ; beep_test:beep_test0|cnt[6]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; beep_test:beep_test0|cnt[12] ; beep_test:beep_test0|cnt[14] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; beep_test:beep_test0|cnt[28] ; beep_test:beep_test0|cnt[30] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.589      ;
+; 0.468 ; beep_test:beep_test0|cnt[26] ; beep_test:beep_test0|cnt[28] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.589      ;
+; 0.468 ; beep_test:beep_test0|cnt[10] ; beep_test:beep_test0|cnt[12] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.516 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[23] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[7]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.636      ;
+; 0.516 ; beep_test:beep_test0|cnt[29] ; beep_test:beep_test0|cnt[31] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[19] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[21] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; beep_test:beep_test0|cnt[3]  ; beep_test:beep_test0|cnt[5]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.636      ;
+; 0.516 ; beep_test:beep_test0|cnt[27] ; beep_test:beep_test0|cnt[29] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.517 ; beep_test:beep_test0|cnt[1]  ; beep_test:beep_test0|cnt[3]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.517 ; beep_test:beep_test0|cnt[23] ; beep_test:beep_test0|cnt[25] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.517 ; beep_test:beep_test0|cnt[11] ; beep_test:beep_test0|cnt[13] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.517 ; beep_test:beep_test0|cnt[25] ; beep_test:beep_test0|cnt[27] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.517 ; beep_test:beep_test0|cnt[13] ; beep_test:beep_test0|cnt[16] ; clk          ; clk         ; 0.000        ; 0.038      ; 0.639      ;
+; 0.518 ; beep_test:beep_test0|cnt[9]  ; beep_test:beep_test0|cnt[11] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.638      ;
+; 0.519 ; beep_test:beep_test0|cnt[21] ; beep_test:beep_test0|cnt[24] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; beep_test:beep_test0|cnt[5]  ; beep_test:beep_test0|cnt[8]  ; clk          ; clk         ; 0.000        ; 0.036      ; 0.639      ;
+; 0.519 ; beep_test:beep_test0|cnt[19] ; beep_test:beep_test0|cnt[22] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; beep_test:beep_test0|cnt[17] ; beep_test:beep_test0|cnt[20] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.640      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                              ;
++--------+--------------+----------------+-----------------+-------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                       ;
++--------+--------------+----------------+-----------------+-------+------------+------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk                          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; -0.259 ; -0.075       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[15] ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[0]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[10] ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[11] ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[12] ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[13] ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[14] ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[1]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[2]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[3]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[4]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[5]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[6]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[7]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[8]  ;
+; -0.237 ; -0.053       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[9]  ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[16] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[17] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[18] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[19] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[20] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[21] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[22] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[23] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[24] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[25] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[26] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[27] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[28] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[29] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[30] ;
+; -0.236 ; -0.052       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; beep_test:beep_test0|cnt[31] ;
+; -0.079 ; -0.079       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[15]|clk       ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[0]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[10]|clk       ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[11]|clk       ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[12]|clk       ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[13]|clk       ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[14]|clk       ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[1]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[2]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[3]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[4]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[5]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[6]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[7]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[8]|clk        ;
+; -0.057 ; -0.057       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[9]|clk        ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[16]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[17]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[18]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[19]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[20]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[21]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[22]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[23]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[24]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[25]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[26]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[27]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[28]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[29]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[30]|clk       ;
+; -0.056 ; -0.056       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; beep_test0|cnt[31]|clk       ;
+; -0.052 ; -0.052       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; clk~input|o                  ;
+; -0.033 ; -0.033       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]    ;
+; -0.033 ; -0.033       ; 0.000          ; Low Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk      ;
++--------+--------------+----------------+-----------------+-------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ena       ; clk        ; 0.757 ; 1.228 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ena       ; clk        ; -0.275 ; -0.739 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep      ; clk        ; 5.265 ; 5.203 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep      ; clk        ; 3.945 ; 3.952 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.462   ; 0.262 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -3.462   ; 0.262 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -106.116 ; 0.0   ; 0.0      ; 0.0     ; -50.584             ;
+;  clk             ; -106.116 ; 0.000 ; N/A      ; N/A     ; -50.584             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ena       ; clk        ; 1.813 ; 1.877 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ena       ; clk        ; -0.275 ; -0.735 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; beep      ; clk        ; 11.279 ; 11.588 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep      ; clk        ; 3.945 ; 3.952 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; beep          ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; rst                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ena                     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; beep          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.51e-09 V                   ; 3.18 V              ; -0.157 V            ; 0.147 V                              ; 0.259 V                              ; 2.81e-10 s                  ; 2.53e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.51e-09 V                  ; 3.18 V             ; -0.157 V           ; 0.147 V                             ; 0.259 V                             ; 2.81e-10 s                 ; 2.53e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; beep          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.6e-07 V                    ; 3.13 V              ; -0.103 V            ; 0.164 V                              ; 0.134 V                              ; 3.14e-10 s                  ; 4.05e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.6e-07 V                   ; 3.13 V             ; -0.103 V           ; 0.164 V                             ; 0.134 V                             ; 3.14e-10 s                 ; 4.05e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_nCEO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; beep          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 6.54e-08 V                   ; 3.66 V              ; -0.26 V             ; 0.41 V                               ; 0.32 V                               ; 1.57e-10 s                  ; 2.15e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 6.54e-08 V                  ; 3.66 V             ; -0.26 V            ; 0.41 V                              ; 0.32 V                              ; 1.57e-10 s                 ; 2.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1584     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1584     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 64    ; 64   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 29    ; 29   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Tue Dec 01 16:30:24 2020
+Info: Command: quartus_sta beep_test -c beep_test
+Info: qsta_default_script.tcl version: #11
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'beep_test.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.462
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.462            -106.116 clk 
+Info (332146): Worst-case hold slack is 0.629
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.629               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -50.584 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.204
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.204             -97.824 clk 
+Info (332146): Worst-case hold slack is 0.561
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.561               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -50.584 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.843
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.843             -25.263 clk 
+Info (332146): Worst-case hold slack is 0.262
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.262               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -44.538 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Tue Dec 01 16:30:27 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

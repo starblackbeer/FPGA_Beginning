@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at led_flash.v(29): always construct contains both blocking and non-blocking assignments

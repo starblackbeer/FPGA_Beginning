@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 01 16:30:11 2020
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : beep_test
+Top-level Entity Name : beep_top
+Family : Cyclone IV E
+Total logic elements : 48
+    Total combinational functions : 48
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

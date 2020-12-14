@@ -1,0 +1,3 @@
+module BCD_counter(clk, rst_n, cin, cout, q);
+
+endmodule

@@ -1,0 +1,85 @@
+|BCD_counter_top
+clk => clk.IN3
+cin => cin.IN1
+rst_n => rst_n.IN3
+cout << BCD_counter:BCD_counter2.cout
+q[0] << BCD_counter:BCD_counter0.q
+q[1] << BCD_counter:BCD_counter0.q
+q[2] << BCD_counter:BCD_counter0.q
+q[3] << BCD_counter:BCD_counter0.q
+q[4] << BCD_counter:BCD_counter1.q
+q[5] << BCD_counter:BCD_counter1.q
+q[6] << BCD_counter:BCD_counter1.q
+q[7] << BCD_counter:BCD_counter1.q
+q[8] << BCD_counter:BCD_counter2.q
+q[9] << BCD_counter:BCD_counter2.q
+q[10] << BCD_counter:BCD_counter2.q
+q[11] << BCD_counter:BCD_counter2.q
+
+
+|BCD_counter_top|BCD_counter:BCD_counter0
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cout.IN1
+cin => cout.IN1
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cin => cnt[0].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_counter_top|BCD_counter:BCD_counter1
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cout.IN1
+cin => cout.IN1
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cin => cnt[0].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCD_counter_top|BCD_counter:BCD_counter2
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cout.IN1
+cin => cout.IN1
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cin => cnt[0].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

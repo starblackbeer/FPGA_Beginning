@@ -1,0 +1,1 @@
+module BCD_counter_top(clk, cin, rst, cout, q);

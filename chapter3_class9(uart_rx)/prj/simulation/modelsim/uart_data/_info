@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/simulation/modelsim
+vuart_data
+!s110 1608341992
+!i10b 1
+!s100 >?ZjHbzf1AnUj6XD:MR4c3
+I1Z^WPERAb0Zfj;__^N^a^3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1608341923
+8e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class9(uart_rx)/prj/db/ip/uart_data/uart_data.v
+Fe:/fpga_code/ac620_draft/fpga_beginning/chapter3_class9(uart_rx)/prj/db/ip/uart_data/uart_data.v
+L0 6
+OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1608341992.443000
+!s107 e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class9(uart_rx)/prj/db/ip/uart_data/uart_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|uart_data|+incdir+e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class9(uart_rx)/prj/db/ip/uart_data|e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class9(uart_rx)/prj/db/ip/uart_data/uart_data.v|
+!i113 0
+o-vlog01compat -work uart_data -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work uart_data +incdir+e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class9(uart_rx)/prj/db/ip/uart_data -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

@@ -1,0 +1,55 @@
+transcript on
+if ![file isdirectory verilog_libs] {
+	file mkdir verilog_libs
+}
+
+vlib verilog_libs/altera_ver
+vmap altera_ver ./verilog_libs/altera_ver
+vlog -vlog01compat -work altera_ver {d:/altera/15.0/quartus/eda/sim_lib/altera_primitives.v}
+
+vlib verilog_libs/lpm_ver
+vmap lpm_ver ./verilog_libs/lpm_ver
+vlog -vlog01compat -work lpm_ver {d:/altera/15.0/quartus/eda/sim_lib/220model.v}
+
+vlib verilog_libs/sgate_ver
+vmap sgate_ver ./verilog_libs/sgate_ver
+vlog -vlog01compat -work sgate_ver {d:/altera/15.0/quartus/eda/sim_lib/sgate.v}
+
+vlib verilog_libs/altera_mf_ver
+vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+vlog -vlog01compat -work altera_mf_ver {d:/altera/15.0/quartus/eda/sim_lib/altera_mf.v}
+
+vlib verilog_libs/altera_lnsim_ver
+vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+vlog -sv -work altera_lnsim_ver {d:/altera/15.0/quartus/eda/sim_lib/altera_lnsim.sv}
+
+vlib verilog_libs/cycloneive_ver
+vmap cycloneive_ver ./verilog_libs/cycloneive_ver
+vlog -vlog01compat -work cycloneive_ver {d:/altera/15.0/quartus/eda/sim_lib/cycloneive_atoms.v}
+
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module/sync_trigger.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module/key_filter.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module/edge_tell.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl/uart_tx_top.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/prj/ip {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/prj/ip/counter.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl/uart_byte_tx.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/testbench {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/testbench/uart_byte_tx_tb.v}
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/testbench {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/testbench/uart_tx_top_tb.v}
+vlib uart_data
+vmap uart_data uart_data
+vlog -vlog01compat -work uart_data +incdir+e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class8(uart_tx)/prj/db/ip/uart_data {e:/fpga_code/ac620_draft/fpga_beginning/chapter3_class8(uart_tx)/prj/db/ip/uart_data/uart_data.v}
+
+vlog -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/prj/../testbench {E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/prj/../testbench/uart_tx_top_tb.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L uart_data -voptargs="+acc"  uart_tx_top_tb
+
+add wave *
+view structure
+view signals
+run -all

@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\FPGA_Code\AC620_Draft\FPGA_Beginning\uart_tx_rx_module\prj\IP\ISSP.qsys --block-symbol-file --output-directory=E:\FPGA_Code\AC620_Draft\FPGA_Beginning\uart_tx_rx_module\prj\IP\ISSP --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading IP/ISSP.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 15.0]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\FPGA_Code\AC620_Draft\FPGA_Beginning\uart_tx_rx_module\prj\IP\ISSP.qsys --synthesis=VERILOG --output-directory=E:\FPGA_Code\AC620_Draft\FPGA_Beginning\uart_tx_rx_module\prj\IP\ISSP\synthesis --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading IP/ISSP.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 15.0]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ISSP: Generating ISSP "ISSP" for QUARTUS_SYNTH
+Info: in_system_sources_probes_0: "ISSP" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: ISSP: Done "ISSP" with 2 modules, 1 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

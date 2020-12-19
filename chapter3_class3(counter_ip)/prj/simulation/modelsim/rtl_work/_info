@@ -1,0 +1,81 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/simulation/modelsim
+T_opt
+!s110 1607761150
+VVG2`b?d1XKb_869cHRfU11
+04 11 4 work counter_tb2 fast 0
+=1-c85b76ecf1b4-5fd47cfe-282-11cc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vcounter
+Z1 !s110 1607761149
+!i10b 1
+!s100 N_FgFYC9a2`kc=M1iYRbB2
+IAPlhCe01JB`ZiQ=eB<zP11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1607656450
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/ip/counter.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/ip/counter.v
+L0 40
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1607761149.644000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/ip/counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/ip|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/ip/counter.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/ip -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vcounter_tb2
+R1
+!i10b 1
+!s100 =:Jb8GmLOiYXUhVl;GC[D3
+IGFIY`XOWbZRW53Ca^7TB61
+R2
+R0
+w1607657143
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/../testbench/counter_tb2.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/../testbench/counter_tb2.v
+L0 4
+R3
+r1
+!s85 0
+31
+!s108 1607761149.868000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/../testbench/counter_tb2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/../testbench|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/../testbench/counter_tb2.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/prj/../testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vcounter_top
+R1
+!i10b 1
+!s100 QKn=::?4`2CKok5L_N6HH1
+I705Pm[LD8oSZnPA0ia=hj1
+R2
+R0
+w1607655254
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/rtl/counter_top.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/rtl/counter_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1607761149.765000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/rtl/counter_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/rtl/counter_top.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class3/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

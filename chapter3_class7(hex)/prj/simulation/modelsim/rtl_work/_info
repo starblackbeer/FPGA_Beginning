@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/simulation/modelsim
+T_opt
+!s110 1608016676
+VH9F>ibNA1`c01S@hN9YeB3
+04 14 4 work divide_into_tb fast 0
+=1-c85b76ecf1b4-5fd86324-216-15c4
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vdivder
+Z1 !s110 1608016675
+!i10b 1
+!s100 DQm12_6dn;;>zWU`Y6ldY0
+I86:^1nT:U=XdU8OnVkPkJ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1607933373
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divder.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divder.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1608016675.234000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divder.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdivide_into
+R1
+!i10b 1
+!s100 G?:10136E56A;2cKfJ0XP1
+I`aaLVgYEc;izl>igA^iiV3
+R2
+R0
+w1608016522
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divide_into4.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divide_into4.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1608016675.668000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divide_into4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/divide_into4.v|
+!i113 0
+R4
+R5
+vdivide_into_tb
+R1
+!i10b 1
+!s100 6mbZl4>Q`H;?5`gGEof?80
+I:JQb3FAi`jGfI7IY]gYlZ3
+R2
+R0
+w1608016504
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/../testbench/divide_into_tb.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/../testbench/divide_into_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1608016675.786000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/../testbench/divide_into_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/../testbench|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/../testbench/divide_into_tb.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/prj/../testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vHex8_top
+R1
+!i10b 1
+!s100 =JkS=Ke<Y<zmWV4j?OX8j1
+I6c:NF3h@YdGYn=4dZfbYZ1
+R2
+R0
+w1608016638
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/Hex8_top.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/Hex8_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1608016675.111000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/Hex8_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/Hex8_top.v|
+!i113 0
+R4
+R5
+n@hex8_top
+vlut
+R1
+!i10b 1
+!s100 RH7k:dC76E?XbUU:7F73o1
+I@A9Q>zaM7zLjNO0VL1zA32
+R2
+R0
+w1607936357
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/lut.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/lut.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1608016675.551000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/lut.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/lut.v|
+!i113 0
+R4
+R5
+vmux8
+R1
+!i10b 1
+!s100 1ZNXFc4<`Cb;Hh3d=0=l50
+IHh4ZfQEFHEfb^_R;H:6>>1
+R2
+R0
+w1607934758
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/mux8.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/mux8.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1608016675.447000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/mux8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/mux8.v|
+!i113 0
+R4
+R5
+vshift8
+R1
+!i10b 1
+!s100 iza0O?VK=j1Oo0TbA4JEc0
+I7L3OY?O?W@>m=PLU:[X<g1
+R2
+R0
+w1607936622
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/shift8.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/shift8.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1608016675.340000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/shift8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class7/rtl/shift8.v|
+!i113 0
+R4
+R5

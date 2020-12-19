@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/simulation/modelsim
+T_opt
+!s110 1608341993
+VQ9_Z9K;4QIc9l@YlnMCon1
+04 14 4 work uart_rx_top_tb fast 0
+=1-c85b76ecf1b4-5fdd59e9-118-2838
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L uart_data +acc
+n@_opt
+OL;O;10.4;61
+vuart_byte_rx
+Z1 !s110 1608341991
+!i10b 1
+!s100 Ue4E;0b4<RcQ?ioYz4?232
+IQZ@afc3HgdKRGee_Le9a;0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1608340350
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_byte_rx.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_byte_rx.v
+Z3 L0 10
+Z4 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1608341991.965000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_byte_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_byte_rx.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vuart_byte_tx
+R1
+!i10b 1
+!s100 j5Nk6MR1[iOOI5TGiJf3c1
+IZGQPZeVfg]BR^L1WPgc[@1
+R2
+R0
+w1608262108
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl/uart_byte_tx.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl/uart_byte_tx.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1608341991.718000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl/uart_byte_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl/uart_byte_tx.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class8(uart_tx)/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vuart_rx_tb
+Z7 !s110 1608341992
+!i10b 1
+!s100 dQ=9Rma:e3B<<;AFJ434B2
+IQ>7:P<9U]ic9Lzgkd2NJ53
+R2
+R0
+w1608340570
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/testbench/uart_rx_tb.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/testbench/uart_rx_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1608341992.100000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/testbench/uart_rx_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/testbench|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/testbench/uart_rx_tb.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vuart_rx_top
+R1
+!i10b 1
+!s100 mbim>]2ghATPCDoRiR8]H0
+I>JB8d;AagzNn?U:YNZN8]2
+R2
+R0
+w1608341638
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_rx_top.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_rx_top.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1608341991.848000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_rx_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/rtl/uart_rx_top.v|
+!i113 0
+R5
+R6
+vuart_rx_top_tb
+R7
+!i10b 1
+!s100 QFSo6gYWXh1ibOl1Yz=6G0
+If:5ibOfdCjHICFNCj]8Vn2
+R2
+R0
+w1608341878
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/../testbench/uart_rx_top_tb.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/../testbench/uart_rx_top_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1608341992.586000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/../testbench/uart_rx_top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/../testbench|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/../testbench/uart_rx_top_tb.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class9(uart_rx)/prj/../testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

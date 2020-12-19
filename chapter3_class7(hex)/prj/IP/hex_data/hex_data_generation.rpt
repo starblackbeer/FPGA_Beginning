@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class7\prj\IP\hex_data.qsys --block-symbol-file --output-directory=E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class7\prj\IP\hex_data --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading IP/hex_data.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 15.0]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class7\prj\IP\hex_data.qsys --synthesis=VERILOG --output-directory=E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class7\prj\IP\hex_data\synthesis --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading IP/hex_data.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 15.0]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: hex_data: Generating hex_data "hex_data" for QUARTUS_SYNTH
+Info: in_system_sources_probes_0: "hex_data" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: hex_data: Done "hex_data" with 2 modules, 1 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

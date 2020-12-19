@@ -1,0 +1,165 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/simulation/modelsim
+T_opt
+!s110 1607926832
+VcbZ8kJL[MNEN<E4gGAb`i2
+04 10 4 work key_led_tb fast 0
+=1-c85b76ecf1b4-5fd70430-bf-2254
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vcounter
+Z1 !s110 1607926831
+!i10b 1
+!s100 :ckKeh<NNM;dAgoKNOUmT0
+Ijei;=Tj2eVhRnBJEJLB^C1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1607926784
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/IP/counter.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/IP/counter.v
+L0 40
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1607926831.343000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/IP/counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/IP|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/IP/counter.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/IP -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vedge_tell
+R1
+!i10b 1
+!s100 4S[mV0aI?5^B0ciinn9XL0
+I1]g?ZZ]lh;6[AzOfYgM;J1
+R2
+R0
+w1607911272
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/edge_tell.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/edge_tell.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1607926831.016000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/edge_tell.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/edge_tell.v|
+!i113 0
+R4
+Z5 !s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vkey_filter
+Z6 !s110 1607926830
+!i10b 1
+!s100 ]CJB^zOZ4Nb`>TDW]Qb=C3
+Io^R[lXIEUG>VPESLL3MZL1
+R2
+R0
+w1607911129
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/key_filter.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/key_filter.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1607926830.912000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/key_filter.v|
+!i113 0
+R4
+R5
+vkey_led_tb
+R1
+!i10b 1
+!s100 fGUjndB;3D3KCZInT<@903
+IL4DM1>ZVNiXh6fJ`LfL9;0
+R2
+R0
+w1607926145
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/../testbench/key_led_tb.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/../testbench/key_led_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1607926831.458000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/../testbench/key_led_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/../testbench|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/../testbench/key_led_tb.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/prj/../testbench -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vkey_led_top
+R1
+!i10b 1
+!s100 @JAclM]GlD7KMlnUMI=^F0
+I3KGhnTIQS?E[e7G7oFC8g0
+R2
+R0
+w1607925382
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/key_led_top.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/key_led_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1607926831.124000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/key_led_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/key_led_top.v|
+!i113 0
+R4
+Z7 !s92 -vlog01compat -work work +incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vled_ctrl
+R1
+!i10b 1
+!s100 aJ68W[QoIDJd:6j?iFkm10
+I=OW3PYiZzn6Xj826o3L``2
+R2
+R0
+w1607926496
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/led_ctrl.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/led_ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1607926831.234000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/led_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/chapter3_class6/rtl/led_ctrl.v|
+!i113 0
+R4
+R7
+vsync_trigger
+R6
+!i10b 1
+!s100 Z;nNj12:e06feAl=2:EPa3
+Ihh_`GJRG3DzAF@j<T^4aT2
+R2
+R0
+w1607911364
+8E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/sync_trigger.v
+FE:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/sync_trigger.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1607926830.791000
+!s107 E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/sync_trigger.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer|E:/FPGA_Code/AC620_Draft/FPGA_Beginning/module_refer/sync_trigger.v|
+!i113 0
+R4
+R5

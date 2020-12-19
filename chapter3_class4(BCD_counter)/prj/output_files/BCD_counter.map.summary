@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 11 15:18:30 2020
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : BCD_counter
+Top-level Entity Name : BCD_counter_top
+Family : Cyclone IV E
+Total logic elements : 18
+    Total combinational functions : 18
+    Dedicated logic registers : 12
+Total registers : 12
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

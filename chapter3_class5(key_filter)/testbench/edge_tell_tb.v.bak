@@ -1,0 +1,8 @@
+`timescale 1ns/1ns
+`define clock_period 20
+module edge_tell_tb;
+	reg clk, cin, rst_n;
+	wire cout;
+	wire [3:0] q;
+	
+endmodule

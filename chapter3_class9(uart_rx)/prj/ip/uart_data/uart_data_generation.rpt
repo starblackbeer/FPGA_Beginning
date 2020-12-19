@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class9(uart_rx)\prj\ip\uart_data.qsys --block-symbol-file --output-directory=E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class9(uart_rx)\prj\ip\uart_data --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading ip/uart_data.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 15.0]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class9(uart_rx)\prj\ip\uart_data.qsys --synthesis=VERILOG --output-directory=E:\FPGA_Code\AC620_Draft\FPGA_Beginning\chapter3_class9(uart_rx)\prj\ip\uart_data\synthesis --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading ip/uart_data.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 15.0]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: uart_data: Generating uart_data "uart_data" for QUARTUS_SYNTH
+Info: in_system_sources_probes_0: "uart_data" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: uart_data: Done "uart_data" with 2 modules, 1 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

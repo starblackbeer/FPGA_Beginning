@@ -1,0 +1,7 @@
+module key_led_top(
+	input clk,
+	input rst_n,
+	input key_in0,
+	input key_in1,
+	output led[3:0]
+);

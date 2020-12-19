@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Dec 19 15:31:25 2020
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : uart_tx_rx
+Top-level Entity Name : uart_tx_rx_top
+Family : Cyclone IV E
+Total logic elements : 167
+    Total combinational functions : 147
+    Dedicated logic registers : 109
+Total registers : 109
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

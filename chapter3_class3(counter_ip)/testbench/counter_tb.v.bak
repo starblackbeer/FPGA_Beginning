@@ -1,0 +1,4 @@
+`timescale 1ns/1ns
+`define clock_period
+
+module counter_tb

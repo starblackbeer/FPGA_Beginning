@@ -1,4 +1,0 @@
-module key_filter(clk, rst_n, key_in, key_flag, key_state);
-
-
-endmodule
